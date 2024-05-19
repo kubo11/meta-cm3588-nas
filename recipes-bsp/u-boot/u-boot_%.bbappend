@@ -1,3 +1,11 @@
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
+
+SRC_URI:nanopc-nas = " \
+       git://github.com/Kwiboo/u-boot-rockchip.git;protocol=https;branch=rk3xxx-2024.07 \
+       file://0001-Add-nanopc-nas-rk3588-board.patch \
+       "
+SRCREV:nanopc-nas = "f45ea62bdf29961421ab4803361b9107d04ce984"
+
 # various machines require the pyelftools library for parsing dtb files
 DEPENDS:append = " python3-pyelftools-native"
 DEPENDS:append:rk3308 = " u-boot-tools-native"
