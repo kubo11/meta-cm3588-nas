@@ -16,4 +16,4 @@ CLEANBROKEN = "1"
 MAKE_TARGETS = "-C ${STAGING_KERNEL_DIR} M=${S} modules"
 MODULES_INSTALL_TARGET = "-C ${STAGING_KERNEL_DIR} M=${S} modules_install"
 
-FILES:${PN} += "/lib/modules/${KERNEL_VERSION}/extra/modules.order.*"
+FILES:${PN} += "${nonarch_base_libdir}/modules/${KERNEL_VERSION}/extra/modules.order.*"
